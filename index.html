@@ -5,8 +5,67 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Josefin+Sans">
+    <link rel="stylesheet" href="./Assets/style.css">
 </head>
+<img id="cloud" src="./Assets/images/rainbowCloud.png">
+<img src="./Assets/images/cartoonSun.png" id="sun">
+<nav id="navBar">
+    <ul>
+        <li>Home</li>
+        <li>About Us</li>
+        
+        <li><button id="adoptBtn">Adopt</button></li>
+    </ul>
+</nav>
+<header>
+<img id="logo" src="./Assets/images/furryLogo2.png"><br>
+
+
+    
+    <h1>Welcome to Furries!</h1>
+    <p>Our mission is to provide fur-ever homes to our lovely family of cats and dogs. <br> All of our furries are rescues or were found as strays and nursed back to health.  <br>We have an excellent team of veternarians on site that care for them during their transition to their final home :)</p>
+    <p>Browse all of our friends below</p>
+</header>
+
 <body>
     
+    <div id="container">
+    <div id="dogContainer">
+    <div id="dogPics"><img src="./Assets/images/boo.jpg" alt="Boo the dog!"></div><br><p>Browse through all our good boys and girls</p>
+    <div class="button-container">
+        <button id="backward">
+          Backward
+        </button>
+        <button id="forward">
+          Forward
+        </button>
+      </div>
+    </div>
+    <div id="catContainer">
+    <div id="catPics"><img src="./Assets/images/catGlasses.jpg" alt="cat wearing sunglasses"></div><br><p>Check out all our cool cats and kittens</p>
+    <div class="button-container">
+        <button id="backward">
+          Backward
+        </button>
+        <button id="forward">
+          Forward
+        </button>
+      </div>
+</div>
+</div>
+    <div id="myModal" class="modal">
+    <form class="modal-content"><h2>Please fill out this form<span class="close">&times;</span></h2><br>
+                                    <p>We will contact you soon as possible!<br>Thank you for caring!</p>
+        <label for="name">Your Name:</label><br>
+        <input type="text" id="name"><br><br>
+        <label for="email">Email:</label><br>
+        <input type="text" id="email"><br><br>
+        <label for="furry">Name of Furry interested in:</label><br>
+        <input type="text" id="furry"><br><br>
+        <input id="submitBtn" type="submit" value="Submit">
+      </form>
+     </div>
+    <script src="./Assets/script.js"></script>
 </body>
 </html>
