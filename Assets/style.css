@@ -1,0 +1,171 @@
+* {
+    font-family: Josefin Sans;
+}
+
+body {
+   
+    background-image: linear-gradient(rgb(183, 210, 252), rgb(255, 255, 255), rgb(183, 210, 252));
+}
+
+nav ul {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+}
+nav ul li {
+    color: white;
+    text-shadow: 1px 1px 1px black;
+    list-style:none;
+}
+
+header #logo {
+    
+    left: 38%;
+    width: 50%;
+    aspect-ratio: 2;
+    border: none;
+    
+    
+}
+
+header {
+    background-color: white;
+    border-top-left-radius: 30%;
+    border-top-right-radius: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 100px;
+    position:relative;
+    text-align: center;
+    width: 50%;
+    margin-left: 25%;
+    box-shadow: 0px 0px 50px 1px  white;
+}
+
+.hide {
+    display: none;
+}
+
+#cloud  {
+    position: fixed;
+    top: 0;
+    left: 0;
+    border: none;
+}
+
+#sun {
+    position: fixed;
+    right: 70px;
+    opacity:75%;
+    border: none;
+}
+#container {
+   
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 33%;
+    padding-top: 100px;
+}
+
+#dogContainer {
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    bottom: 20%;
+    left: 20%;
+    border-radius: 20%;
+    padding: 20px;
+}
+
+#catContainer {
+  
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   
+    bottom: 20%;
+    right: 20%;
+    border-radius: 20%;
+    padding: 20px;
+}
+
+img {
+    aspect-ratio: 1;
+    height: 200px;
+    border: 1px solid white;
+    border-radius: 10%;
+}
+
+#adoptBtn {
+    position: fixed;
+    background-color: aliceblue;
+    font-size: 20px;
+    align-items: center;
+
+    width: fit-content;
+    
+    top: 15px;
+    right: 15px;
+}
+
+button {
+    border-radius: 30%;
+    font-size: 10px;
+    padding: 10px;
+}
+
+button:hover {
+    font-weight: bolder;
+}
+
+
+
+/* The Modal (background) */
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    aspect-ratio: 1; 
+    overflow: auto;
+  
+  }
+  
+  /* Modal Content/Box */
+  .modal-content {
+    background-color:rgb(87, 170, 248);
+    margin: 15% auto;
+    padding: 20px;
+    border: none;
+    width: 25%; 
+    border-end-end-radius: 30%;
+    border-top-left-radius: 10%;
+    border-bottom-left-radius: 10%;
+  }
+  
+  /* The Close Button */
+  .close {
+    color: rgb(82, 200, 255);
+    position: fixed;
+    left: 62%;
+    top: 32%;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
