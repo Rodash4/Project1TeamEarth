@@ -29,3 +29,17 @@ btn.onclick = function() {
 span.onclick = function() {
   modal.style.display = "none";
 }
+
+
+fetch('https://cat-fact.herokuapp.com/facts', {
+  method: 'GET', //GET is the default.
+  credentials: 'same-origin', // include, *same-origin, omit
+  redirect: 'follow', // manual, *follow, error
+})
+  .then(function (response) {
+    return response.json();
+  })
+  .then(function (data) {
+    console.log(data);
+    
+  });
