@@ -97,6 +97,23 @@ header {
     padding: 20px;
 }
 
+.catSlide {
+    display: none;
+}
+
+.catName {
+    text-align: center;
+}
+
+.dogSlide {
+    display: none;
+}
+
+.dogName {
+    text-align: center;
+}
+
+
 img {
     aspect-ratio: 1;
     height: 200px;

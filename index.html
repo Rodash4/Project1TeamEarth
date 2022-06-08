@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Furries Adoption</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Josefin+Sans">
-    <link rel="stylesheet" href="./Assets/style.css">
+    <link rel="stylesheet" href="./assets/style.css">
 </head>
-<img id="cloud" src="./Assets/images/rainbowCloud.png">
+<img id="cloud" src="./assets/images/rainbowCloud.png">
 <img src="./Assets/images/cartoonSun.png" id="sun">
 <nav id="navBar">
     <ul>
@@ -19,11 +19,11 @@
     </ul>
 </nav>
 <header>
-<img id="logo" src="./Assets/images/furryLogo2.png"><br>
+<img id="logo" src="./assets/images/furryLogo2.png"><br>
 
 
     
-    <h1>Welcome to Furries!</h1>
+    <h1git>Welcome to Furries!</h1>
     <p>Our mission is to provide fur-ever homes to our lovely family of cats and dogs. <br> All of our furries are rescues or were found as strays and nursed back to health.  <br>We have an excellent team of veternarians on site that care for them during their transition to their final home :)</p>
     <p>Browse all of our friends below</p>
 </header>
@@ -38,23 +38,82 @@
     
     <div id="container">
     <div id="dogContainer">
-    <div id="dogPics"><img src="./Assets/images/boo.jpg" alt="Boo the dog!"></div><br><p>Browse through all our good boys and girls</p>
+    <div class = "dogSlide" id="dogPics">
+      <img src="./assets/images/boo.jpg" alt="Boo the dog!"><br>
+      <div class = "dagName">Boo</div>
+     </div> 
+
+     <div class = "dogSlide" id="dogPics">
+      <img src="./assets/images/boo.jpg" alt="Boo the dog!"><br>
+      <div class = "dagName">Boo</div>
+     </div> 
+
+     <div class = "dogSlide" id="dogPics">
+      <img src="./assets/images/boo.jpg" alt="Boo the dog!"><br>
+      <div class = "dagName">Boo</div>
+     </div> 
+
+     <div class = "dogSlide" id="dogPics">
+      <img src="./assets/images/boo.jpg" alt="Boo the dog!"><br>
+      <div class = "dagName">Boo</div>
+     </div> 
+
+     <div class = "dogSlide" id="dogPics">
+      <img src="./assets/images/boo.jpg" alt="Boo the dog!"><br>
+      <div class = "dagName">Boo</div>
+     </div> 
+
+     <div class = "dogSlide" id="dogPics">
+      <img src="./assets/images/boo.jpg" alt="Boo the dog!"><br>
+      <div class = "dagName">Boo</div>
+     </div> 
+
+      <div><p>Browse through all our good boys and girls</p></div>
     <div class="button-container">
-        <button id="backward">
+        <button id="backward" onclick="setSlides(-1)">
           Backward
         </button>
-        <button id="forward">
+        <button id="forward" onclick= "setSlides(1)">
           Forward
         </button>
       </div>
     </div>
+   
     <div id="catContainer">
-    <div id="catPics"><img src="./Assets/images/catGlasses.jpg" alt="cat wearing sunglasses"></div><br><p>Check out all our cool cats and kittens</p>
+    <div class = "catSlide fade" id="catPics">
+    <img src="./assets/images/catGlasses.jpg" alt="cat wearing sunglasses"><br>
+    <div class="catName">Tom</div></div>
+
+    <div class = "catSlide fade" id="catPics">
+      <img src="assets\images\cat2.jpg" alt="cat wearing beanie"><br>
+    <div class="catName">Fred</div>
+   </div>
+
+    <div class = "catSlide fade" id="catPics">
+    <img src="assets\images\Cat3.jpg" alt="egyptain cat"><br>
+    <div class="catName">King</div>
+    </div>
+
+    <div class = "catSlide fade" id="catPics">
+    <img src="assets\images\cat4.jpg" alt="Cheif Cat"><br>
+    <div class="catName">Ramsey</div>
+   </div>
+
+    <div class = "catSlide fade" id="catPics">
+    <img src="assets\images\cat5.jpg" alt="Cheif Cat"><br>
+    <div class="catName">Queen</div>
+    </div>
+
+    <div class = "catSlide fade" id="catPics">
+    <img src="assets\images\cat6.jpg" alt="Cheif Cat"><br>
+    <div class="catName">Sushi</div>
+   </div>
+    <div><p>Check out all our cool cats and kittens</p></div>
     <div class="button-container">
-        <button id="backward">
+        <button id="backward" onclick="setSlides(-1)">
           Backward
         </button>
-        <button id="forward">
+        <button id="forward" onclick= "setSlides(1)">
           Forward
         </button>
       </div>
@@ -72,6 +131,6 @@
         <button id="submitBtn">Submit</button>
       </form>
      </div>
-    <script src="./Assets/script.js"></script>
+    <script src="./assets/script.js"></script>
 </body>
 </html>
