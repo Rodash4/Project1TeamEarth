@@ -53,6 +53,7 @@ catBtn.addEventListener ("click", function() {
   })
 });
 
+
 function displaySlides(num) {
   var x;
   var slides = document.getElementsByClassName("catSlide");
@@ -86,3 +87,5 @@ function display(num) {
   slides[currentIndex - 1].style.display = "block";
 
 }
+
+
