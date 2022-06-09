@@ -71,6 +71,10 @@ header {
     padding-top: 100px;
 }
 
+.hide {
+    display: none;
+}
+
 #dogContainer {
     border: none;
     display: flex;
@@ -122,6 +126,7 @@ img {
     height: 200px;
     border: none;
     border-radius: 5%;
+
 }
 
 #adoptBtn {
