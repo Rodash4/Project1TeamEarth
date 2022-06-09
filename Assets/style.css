@@ -1,5 +1,5 @@
 * {
-    font-family: Josefin Sans;
+    font-family: Patrick Hand;
 }
 
 body {
@@ -48,11 +48,12 @@ header {
     display: none;
 }
 
-#cloud  {
+#paw  {
     position: fixed;
     top: 0;
     left: 0;
     border: none;
+    opacity:75%;
 }
 
 #sun {
@@ -71,37 +72,39 @@ header {
 }
 
 #dogContainer {
-    border: 1px solid black;
+    border: none;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    
+    width: 250px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     bottom: 20%;
     left: 20%;
-    border-radius: 20%;
+    border-radius: 5%;
     padding: 20px;
 }
 
 #catContainer {
   
-    border: 1px solid black;
+    border: none;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-   
+    width: 250px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     bottom: 20%;
     right: 20%;
-    border-radius: 20%;
+    border-radius: 5%;
     padding: 20px;
 }
 
 img {
     aspect-ratio: 1;
     height: 200px;
-    border: 1px solid white;
-    border-radius: 10%;
+    border: none;
+    border-radius: 5%;
 }
 
 #adoptBtn {
@@ -169,3 +172,66 @@ button:hover {
     text-decoration: none;
     cursor: pointer;
   }
+
+  #funSection {
+      text-align: center;
+    
+  }
+
+  #dogBtn {
+      font-size: 26px;
+      
+
+  }
+  
+  #dogBtn:hover {
+    cursor: pointer;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    color: seagreen;
+
+  }
+
+  #catBtn {
+    font-size: 26px;
+  } 
+
+  #catBtn:hover {
+    cursor: pointer;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    color: seagreen;
+
+  }
+
+
+  nav {
+      padding: 20px;
+      text-align: center;
+      background-color: blueviolet;
+  }
+
+  footer {
+    padding: 20px;
+    text-align: center;
+    background-color: blueviolet;
+  }
+
+  .navBar input[type=text] {
+      float: right;
+      padding: 6px;
+      border: none;
+      margin-top: 8pm;
+      margin-right: 16px;
+      font-size: 17px;
+  }
+
+ @media screen and (max-width:600px) {
+     .navBar a, .navBar input[type-text] {
+         float: none;
+         display: block;
+         text-align: left;
+         width: 100%;
+         margin: 0;
+         padding: 14px;
+    
+     }
+ }
