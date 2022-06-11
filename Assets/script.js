@@ -52,21 +52,6 @@ function nextSlide() {
 }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // function executed on click of submit that stores pertinent data to local storage.
 
 submitBtn.addEventListener("click", function() {
@@ -82,13 +67,13 @@ submitBtn.addEventListener("click", function() {
 
    ///// code for modal
 
-btn.onclick = function() {
-  modal.style.display = "block";
-}
+// btn.onclick = function() {
+//   modal.style.display = "block";
+// }
 
-span.onclick = function() {
-  modal.style.display = "none";
-}
+// span.onclick = function() {
+//   modal.style.display = "none";
+// }
 
 
 
@@ -111,6 +96,7 @@ catBtn.addEventListener ("click", function() {
   })
 });
 
+<<<<<<< HEAD
 dogBtn.addEventListener ("click", function() {
   fetch('https://cat-fact.herokuapp.com/facts/random?animal_type=dog&amount=10', {
   method: 'GET', //GET is the default.
@@ -129,42 +115,86 @@ dogBtn.addEventListener ("click", function() {
     dogFact.appendChild(Fact);
   })
 });
+=======
+>>>>>>> main
 
 
+var catPics = [
+  {name : "Tom",
+   image: "catGlasses.jpg",
+   text : "Easygoing and sweet, Tom will always choose affection. He loves jazz music and a good backrub."},
+  {name: "Fred",
+   image: "cat2.jpg",
+   text : "Meet handsome Fred! He is a bit of a character, which makes for the most interesting of companion"},
+  {name: "King",
+   image: "Cat3.jpg",
+   text : "He thinks he's a King! King is ready to embark on adventure with his new human."},
+  {name: "Ramsey",
+   image: "cat4.jpg",
+   text: "Don't let this bad boy fool you. He will judge your food choices but he is a big softie and loves cuddles."},
+  {name: "Queen",
+   image: "cat5.jpg",
+   text: "Queen will be a wonderful best friend and companion. If you're looking for a smart, affectionate, laid-back feline companion, Queen may be the lady for you!"}
+];
 
-function displaySlides(num) {
-  var x;
-  var slides = document.getElementsByClassName("catSlide");
-  if (num > slides.length) { currentIndex = 1 }
-  if (num < 1) { currentIndex = slides.length }
-  for (x = 0; x < slides.length; x++) {
-      slides[x].style.display = "none";
-  }
-  slides[currentIndex - 1].style.display = "block";
+nextCat.addEventListener("click", nextSlidecat)
+var currentSlideIndex = 0;
+
+function nextSlidecat() {
+var file = catPics[currentSlideIndex].image;
+var url = "Assets\images\catpics" + file;
+var pics = document.getElementById("catPics");
+var catText = document.getElementById("catText")
+var catName = document.getElementById("catName")
+// var prev = document.createElement("button")
+// var prevText = document.createTextNode("Previous Cat!");
+// prev.appendChild(prevText);
+// var prevEl = document.getElementById("catSlideBtns")
+// prevEl.appendChild(prev);
+catText.innerHTML = "<p>" + catPics[currentSlideIndex].text +"</p>"
+nextCat.textContent = "Next Cat";
+catName.textContent = catPics[currentSlideIndex].name
+pics.innerHTML = "<img src=" + url + ">"
+
+currentSlideIndex++;
+if( currentSlideIndex >= catPics.length ) {
+currentSlideIndex = 0;
+}
 }
 
-function setSlides(num) {
-  displaySlides(currentIndex += num);
-}
+// function displaySlides(num) {
+//   var x;
+//   var slides = document.getElementsByClassName("catSlide");
+//   if (num > slides.length) { currentIndex = 1 }
+//   if (num < 1) { currentIndex = slides.length }
+//   for (x = 0; x < slides.length; x++) {
+//       slides[x].style.display = "none";
+//   }
+//   slides[currentIndex - 1].style.display = "block";
+// }
 
-var currentIndex = 1;
-displaySlides(currentIndex);
+// function setSlides(num) {
+//   displaySlides(currentIndex += num);
+// }
 
-function setSlides(num) {
-  displaySlides(currentIndex += num);
-}
+// var currentIndex = 1;
+// displaySlides(currentIndex);
 
-function display(num) {
-  var x;
-  var catSlides = document.getElementsByClassName("catSlide");
-  if (num > slides.length) { currentIndex = 1}
-  if (num < 1) { currentIndex = slides.length}
-  for (x = 0; x < slides.length; X++){
-        slides[x].style.display = "none";
-  }
-  slides[currentIndex - 1].style.display = "block";
+// function setSlides(num) {
+//   displaySlides(currentIndex += num);
+// }
 
-}
+// function display(num) {
+//   var x;
+//   var catSlides = document.getElementsByClassName("catSlide");
+//   if (num > slides.length) { currentIndex = 1}
+//   if (num < 1) { currentIndex = slides.length}
+//   for (x = 0; x < slides.length; X++){
+//         slides[x].style.display = "none";
+//   }
+//   slides[currentIndex - 1].style.display = "block";
+
+// }
 
 
 
