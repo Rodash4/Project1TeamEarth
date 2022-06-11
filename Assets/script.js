@@ -130,6 +130,7 @@ dogBtn.addEventListener ("click", function() {
 });
 
 
+
 function displaySlides(num) {
   var x;
   var slides = document.getElementsByClassName("catSlide");
