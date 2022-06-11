@@ -130,15 +130,12 @@ img {
 }
 
 #adoptBtn {
-    position: fixed;
+   
     background-color: aliceblue;
     font-size: 20px;
     align-items: center;
 
-    width: fit-content;
     
-    top: 15px;
-    right: 15px;
 }
 
 button {
@@ -197,6 +194,7 @@ button:hover {
 
   #funSection {
       text-align: center;
+      justify-content: space-between;
     
   }
 
