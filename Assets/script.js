@@ -10,6 +10,7 @@ var catBtn = document.getElementById("catBtn");
 var nextDog = document.getElementById("nextDoggie");
 var dogBtn = document.getElementById("dogBtn");
 var dogFact = document.getElementById("dogFacts");
+var weather = document.getElementById("weatherDisplay");
 
 
 
@@ -79,7 +80,7 @@ submitBtn.addEventListener("click", function() {
   return;
   });
 
-
+   ///// code for modal
 
 btn.onclick = function() {
   modal.style.display = "block";
@@ -103,7 +104,7 @@ catBtn.addEventListener ("click", function() {
   .then(function (data) {
     randomNum = Math.floor(Math.random() * data.length)
     console.log(data);
-    var Fact = document.createElement('p')
+    var Fact = document.createElement('h3')
     Fact.textContent = data[randomNum].text
     catFact.innerHTML = '';
     catFact.appendChild(Fact);
@@ -122,7 +123,7 @@ dogBtn.addEventListener ("click", function() {
   .then(function (data) {
     randomNum = Math.floor(Math.random() * data.length)
     console.log(data);
-    var Fact = document.createElement('p')
+    var Fact = document.createElement('h3')
     Fact.textContent = data[randomNum].text
     dogFact.innerHTML = '';
     dogFact.appendChild(Fact);
@@ -165,4 +166,35 @@ function display(num) {
 
 }
 
+
+
+
+fetch('http://api.openweathermap.org/geo/1.0/zip?zip=85028,US&appid=a46321094570747c6e960f39cd5b1559', {
+  method: 'GET', //GET is the default.
+  credentials: 'same-origin', // include, *same-origin, omit
+  redirect: 'follow', // manual, *follow, error
+})
+  .then(function (response) {
+    return response.json();
+  })
+  .then(function (data) {
+    console.log(data);
+    localStorage.setItem ("longitude", data.lon);
+    localStorage.setItem ("latitude", data.lat);
+  });
+
+  var latitude = localStorage.getItem("latitude");
+  var longitude = localStorage.getItem("longitude");
+
+  fetch('https://api.openweathermap.org/data/3.0/onecall?lat='+ latitude + '&lon=' + longitude + '&appid=a46321094570747c6e960f39cd5b1559', {
+    method: 'GET', //GET is the default.
+    credentials: 'same-origin', // include, *same-origin, omit
+    redirect: 'follow', // manual, *follow, error
+  })
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (data) {
+      
+    });
 

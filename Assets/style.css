@@ -104,6 +104,14 @@ header {
     padding: 20px;
 }
 
+.factsContainer {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+
+}
+
+
 .catSlide {
     display: none;
 }
@@ -192,11 +200,8 @@ button:hover {
     cursor: pointer;
   }
 
-  #funSection {
-      text-align: center;
-      justify-content: space-between;
-    
-  }
+
+
 
   #dogBtn {
       font-size: 26px;
