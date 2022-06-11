@@ -8,6 +8,8 @@ var span = document.getElementsByClassName("close")[0];
 var catFact = document.getElementById("catFacts");
 var catBtn = document.getElementById("catBtn");
 var nextDog = document.getElementById("nextDoggie");
+var dogBtn = document.getElementById("dogBtn");
+var dogFact = document.getElementById("dogFacts");
 
 
 
@@ -38,18 +40,13 @@ function nextSlide() {
   var pics = document.getElementById("dogPics");
   var dogText = document.getElementById("dogText")
   var dogName = document.getElementById("dogName")
-  // var prev = document.createElement("button")
-  // var prevText = document.createTextNode("Previous Doggie!");
-  // prev.appendChild(prevText);
-  // var prevEl = document.getElementById("dogSlideBtns")
-  // prevEl.appendChild(prev);
   dogText.innerHTML = "<p>" + dogPics[currentSlideIndex].text +"</p>"
   nextDog.textContent = "Next Doggie";
   dogName.textContent = dogPics[currentSlideIndex].name
   pics.innerHTML = "<img src=" + url + ">"
   
   currentSlideIndex++;
-  if( currentSlideIndex >= dogPics.length ) {
+  if( currentSlideIndex === dogPics.length ) {
   currentSlideIndex = 0;
 }
 }
@@ -95,7 +92,7 @@ span.onclick = function() {
 
 
 catBtn.addEventListener ("click", function() {
-  fetch('https://cat-fact.herokuapp.com/facts/random?animal_type=dog&amount=10', {
+  fetch('https://cat-fact.herokuapp.com/facts/random?animal_type=cat&amount=10', {
   method: 'GET', //GET is the default.
   credentials: 'same-origin', // include, *same-origin, omit
   redirect: 'follow', // manual, *follow, error
@@ -112,6 +109,27 @@ catBtn.addEventListener ("click", function() {
     catFact.appendChild(Fact);
   })
 });
+
+dogBtn.addEventListener ("click", function() {
+  fetch('https://cat-fact.herokuapp.com/facts/random?animal_type=dog&amount=10', {
+  method: 'GET', //GET is the default.
+  credentials: 'same-origin', // include, *same-origin, omit
+  redirect: 'follow', // manual, *follow, error
+})
+  .then(function (response) {
+    return response.json();
+  })
+  .then(function (data) {
+    randomNum = Math.floor(Math.random() * data.length)
+    console.log(data);
+    var Fact = document.createElement('p')
+    Fact.textContent = data[randomNum].text
+    dogFact.innerHTML = '';
+    dogFact.appendChild(Fact);
+  })
+});
+
+
 
 function displaySlides(num) {
   var x;
