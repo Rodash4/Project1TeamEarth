@@ -11,7 +11,7 @@ var nextDog = document.getElementById("nextDoggie");
 var dogBtn = document.getElementById("dogBtn");
 var dogFact = document.getElementById("dogFacts");
 
-
+// Dog slides pics and bio
 
 var dogPics = [
     {name : "Labby",
@@ -30,7 +30,7 @@ var dogPics = [
      image: "tongueOut.jpg",
      text: "tongue out like Jordan! Don't take offense to his tongue out at you.  We promise it's very cute."}
 ];
-
+// Function for click to next dog
 nextDog.addEventListener("click", nextSlide)
 var currentSlideIndex = 0;
 
@@ -75,7 +75,7 @@ submitBtn.addEventListener("click", function() {
 // }
 
 
-
+// Function to pull cat facts from API
 catBtn.addEventListener ("click", function() {
   fetch('https://cat-fact.herokuapp.com/facts/random?animal_type=cat&amount=10', {
   method: 'GET', //GET is the default.
@@ -96,7 +96,7 @@ catBtn.addEventListener ("click", function() {
 });
 
 
-
+// Cat slides pics and bio
 var catPics = [
   {name : "Tom",
    image: "catGlasses.jpg",
@@ -114,7 +114,7 @@ var catPics = [
    image: "cat5.jpg",
    text: "Queen will be a wonderful best friend and companion. If you're looking for a smart, affectionate, laid-back feline companion, Queen may be the lady for you!"}
 ];
-
+// Function click to next cat
 nextCat.addEventListener("click", nextSlidecat)
 var currentSlideIndex = 0;
 

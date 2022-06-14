@@ -229,11 +229,12 @@ button:hover {
       background-color: blueviolet;
   }
 
-  footer {
-    padding: 20px;
+  .footer {
+    padding: 30px;
+    clear: both;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     text-align: center;
-    background-color: blueviolet;
-  }
+}
 
   .navBar input[type=text] {
       float: right;
