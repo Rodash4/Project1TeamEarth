@@ -181,12 +181,6 @@ currentSlideIndex = 0;
 //   displaySlides(currentIndex += num);
 // }
 
-
-/*modal start*/ 
-const modalOpen = document.getElementById('modalOpen');
-const modalContainer = document.getElementById('modalContainer');
-const submitBtn = document.getElementById('submitBtn');
-
 // function display(num) {
 //   var x;
 //   var catSlides = document.getElementsByClassName("catSlide");
@@ -230,12 +224,3 @@ fetch('http://api.openweathermap.org/geo/1.0/zip?zip=85028,US&appid=a46321094570
     .then(function (data) {
       console.log(data);
     });
-
-
-modalOpen.addEventListener('click', () => {
-  modalContainer.classList.add('show')
-});
-
-submitBtn.addEventListener('click', () +.{
-  modalContainer.classList.remove('show')
-})
