@@ -10,6 +10,7 @@ var catBtn = document.getElementById("catBtn");
 var nextDog = document.getElementById("nextDoggie");
 var dogBtn = document.getElementById("dogBtn");
 var dogFact = document.getElementById("dogFacts");
+var weather = document.getElementById("weatherDisplay");
 
 // Dog slides pics and bio
 
@@ -64,15 +65,15 @@ submitBtn.addEventListener("click", function() {
   return;
   });
 
+   ///// code for modal
 
+btn.onclick = function() {
+  modal.style.display = "block";
+}
 
-// btn.onclick = function() {
-//   modal.style.display = "block";
-// }
-
-// span.onclick = function() {
-//   modal.style.display = "none";
-// }
+span.onclick = function() {
+  modal.style.display = "none";
+}
 
 
 // Function to pull cat facts from API
@@ -88,13 +89,31 @@ catBtn.addEventListener ("click", function() {
   .then(function (data) {
     randomNum = Math.floor(Math.random() * data.length)
     console.log(data);
-    var Fact = document.createElement('p')
+    var Fact = document.createElement('h3')
     Fact.textContent = data[randomNum].text
     catFact.innerHTML = '';
     catFact.appendChild(Fact);
   })
 });
 
+dogBtn.addEventListener ("click", function() {
+  fetch('https://cat-fact.herokuapp.com/facts/random?animal_type=dog&amount=10', {
+  // method: 'GET', //GET is the default.
+  // credentials: 'same-origin', // include, *same-origin, omit
+  // redirect: 'follow', // manual, *follow, error
+})
+  .then(function (response) {
+    return response.json();
+  })
+  .then(function (data) {
+    randomNum = Math.floor(Math.random() * data.length)
+    console.log(data);
+    var Fact = document.createElement('h3')
+    Fact.textContent = data[randomNum].text
+    dogFact.innerHTML = '';
+    dogFact.appendChild(Fact);
+  })
+});
 
 // Cat slides pics and bio
 var catPics = [
@@ -120,7 +139,7 @@ var currentSlideIndex = 0;
 
 function nextSlidecat() {
 var file = catPics[currentSlideIndex].image;
-var url = "Assets\images\catpics" + file;
+var url = "./Assets/images/catPics/" + file;
 var pics = document.getElementById("catPics");
 var catText = document.getElementById("catText")
 var catName = document.getElementById("catName")
@@ -174,4 +193,35 @@ currentSlideIndex = 0;
 
 // }
 
+
+
+
+fetch('http://api.openweathermap.org/geo/1.0/zip?zip=85028,US&appid=a46321094570747c6e960f39cd5b1559', {
+  method: 'GET', //GET is the default.
+  credentials: 'same-origin', // include, *same-origin, omit
+  redirect: 'follow', // manual, *follow, error
+})
+  .then(function (response) {
+    return response.json();
+  })
+  .then(function (data) {
+    console.log(data);
+    localStorage.setItem ("longitude", data.lon);
+    localStorage.setItem ("latitude", data.lat);
+  });
+
+  var latitude = localStorage.getItem("latitude");
+  var longitude = localStorage.getItem("longitude");
+
+  fetch('https://api.openweathermap.org/data/3.0/onecall?lat='+ latitude + '&lon=' + longitude + '&appid=a46321094570747c6e960f39cd5b1559', {
+    method: 'GET', //GET is the default.
+    credentials: 'same-origin', // include, *same-origin, omit
+    redirect: 'follow', // manual, *follow, error
+  })
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (data) {
+      console.log(data);
+    });
 
