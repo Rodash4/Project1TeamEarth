@@ -71,9 +71,39 @@
     
     <div id="container">
     <div id="dogContainer">
-    <div id="dogPics"><img src="./Assets/images/boo.jpg" alt="Boo the dog!"></div><br><p>Browse through all our good boys and girls</p>
+    <div class = "dogSlide" id="dogPics">
+      <img src="./assets/images/boo.jpg" alt="Boo the dog!"><br>
+      <div class = "dagName">Boo</div>
+     </div> 
+
+     <div class = "dogSlide" id="dogPics">
+      <img src="./assets/images/boo.jpg" alt="Boo the dog!"><br>
+      <div class = "dagName">Boo</div>
+     </div> 
+
+     <div class = "dogSlide" id="dogPics">
+      <img src="./assets/images/boo.jpg" alt="Boo the dog!"><br>
+      <div class = "dagName">Boo</div>
+     </div> 
+
+     <div class = "dogSlide" id="dogPics">
+      <img src="./assets/images/boo.jpg" alt="Boo the dog!"><br>
+      <div class = "dagName">Boo</div>
+     </div> 
+
+     <div class = "dogSlide" id="dogPics">
+      <img src="./assets/images/boo.jpg" alt="Boo the dog!"><br>
+      <div class = "dagName">Boo</div>
+     </div> 
+
+     <div class = "dogSlide" id="dogPics">
+      <img src="./assets/images/boo.jpg" alt="Boo the dog!"><br>
+      <div class = "dagName">Boo</div>
+     </div> 
+
+      <div><p>Browse through all our good boys and girls</p></div>
     <div class="button-container">
-        <button id="backward">
+        <button id="backward" onclick="setSlides(-1)">
           Backward
         </button>
         <button id="forward">
@@ -81,13 +111,44 @@
         </button>
       </div>
     </div>
+   
     <div id="catContainer">
-    <div class="catPics"><img src="./Assets/images/catGlasses.jpg" alt="cat wearing sunglasses" style="width:100%"></div><br><p>Check out all our cool cats and kittens</p>
+
+    <div class = "catSlide fade" id="catPics">
+    <img src="./assets/images/catGlasses.jpg" alt="cat wearing sunglasses"><br>
+    <div class="catName">Tom</div></div>
+
+    <div class = "catSlide fade" id="catPics">
+      <img src="assets\images\cat2.jpg" alt="cat wearing beanie"><br>
+    <div class="catName">Fred</div>
+   </div>
+
+    <div class = "catSlide fade" id="catPics">
+    <img src="assets\images\Cat3.jpg" alt="egyptain cat"><br>
+    <div class="catName">King</div>
+    </div>
+
+    <div class = "catSlide fade" id="catPics">
+    <img src="assets\images\cat4.jpg" alt="Cheif Cat"><br>
+    <div class="catName">Ramsey</div>
+   </div>
+
+    <div class = "catSlide fade" id="catPics">
+    <img src="assets\images\cat5.jpg" alt="Cat"><br>
+    <div class="catName">Queen</div>
+    </div>
+
+    <div class = "catSlide fade" id="catPics">
+    <img src="assets\images\cat6.jpg" alt="Big Eyed Cat"><br>
+    <div class="catName">Sushi</div>
+   </div>
+    <div><p>Check out all our cool cats and kittens</p></div>
+
     <div class="button-container">
-        <button id="backward">
+        <button id="backward" onclick="setSlides(-1)">
           Backward
         </button>
-        <button id="forward">
+        <button id="forward" onclick= "setSlides(1)">
           Forward
         </button>
       </div>
