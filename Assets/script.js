@@ -67,13 +67,13 @@ submitBtn.addEventListener("click", function() {
 
    ///// code for modal
 
-// btn.onclick = function() {
-//   modal.style.display = "block";
-// }
+btn.onclick = function() {
+  modal.style.display = "block";
+}
 
-// span.onclick = function() {
-//   modal.style.display = "none";
-// }
+span.onclick = function() {
+  modal.style.display = "none";
+}
 
 
 
@@ -96,12 +96,11 @@ catBtn.addEventListener ("click", function() {
   })
 });
 
-<<<<<<< HEAD
 dogBtn.addEventListener ("click", function() {
   fetch('https://cat-fact.herokuapp.com/facts/random?animal_type=dog&amount=10', {
-  method: 'GET', //GET is the default.
-  credentials: 'same-origin', // include, *same-origin, omit
-  redirect: 'follow', // manual, *follow, error
+  // method: 'GET', //GET is the default.
+  // credentials: 'same-origin', // include, *same-origin, omit
+  // redirect: 'follow', // manual, *follow, error
 })
   .then(function (response) {
     return response.json();
@@ -115,8 +114,6 @@ dogBtn.addEventListener ("click", function() {
     dogFact.appendChild(Fact);
   })
 });
-=======
->>>>>>> main
 
 
 var catPics = [
@@ -142,7 +139,7 @@ var currentSlideIndex = 0;
 
 function nextSlidecat() {
 var file = catPics[currentSlideIndex].image;
-var url = "Assets\images\catpics" + file;
+var url = "./Assets/images/catPics/" + file;
 var pics = document.getElementById("catPics");
 var catText = document.getElementById("catText")
 var catName = document.getElementById("catName")
@@ -225,6 +222,6 @@ fetch('http://api.openweathermap.org/geo/1.0/zip?zip=85028,US&appid=a46321094570
       return response.json();
     })
     .then(function (data) {
-      
+      console.log(data);
     });
 

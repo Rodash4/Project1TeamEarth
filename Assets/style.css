@@ -108,6 +108,10 @@ header {
     align-items: center;
     display: flex;
     flex-direction: column;
+    width: 100%;
+    background: linear-gradient (rgb(183, 210, 252), rgb(255, 255, 255));
+
+   
 
 }
 
@@ -203,29 +207,35 @@ button:hover {
 
 
 
-  #dogBtn {
+  #dogBtn, #catBtn {
       font-size: 26px;
+      background-color: white;
+      border: 2px solid rgb(82, 200, 255);
+      font-family: Josefin Sans;
+      -webkit-text-stroke: 1px rgb(82, 200, 255);
+	-webkit-text-fill-color: yellow;
       
 
   }
   
-  #dogBtn:hover {
+  #dogBtn, #catBtn:hover {
     cursor: pointer;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    color: seagreen;
+    color: rgb(183, 210, 252);
+
 
   }
 
-  #catBtn {
+  /* #catBtn {
     font-size: 26px;
-  } 
+  }  */
 
-  #catBtn:hover {
+  /* #catBtn:hover {
     cursor: pointer;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     color: seagreen;
 
-  }
+  } */
 
 
   nav {
