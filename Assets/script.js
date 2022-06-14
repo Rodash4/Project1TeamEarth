@@ -54,7 +54,41 @@ catBtn.addEventListener ("click", function() {
 });
 
 
-/modal start/ 
+function displaySlides(num) {
+  var x;
+  var slides = document.getElementsByClassName("catSlide");
+  if (num > slides.length) { currentIndex = 1 }
+  if (num < 1) { currentIndex = slides.length }
+  for (x = 0; x < slides.length; x++) {
+      slides[x].style.display = "none";
+  }
+  slides[currentIndex - 1].style.display = "block";
+}
+
+function setSlides(num) {
+  displaySlides(currentIndex += num);
+}
+
+var currentIndex = 1;
+displaySlides(currentIndex);
+
+function setSlides(num) {
+  displaySlides(currentIndex += num);
+}
+
+function display(num) {
+  var x;
+  var catSlides = document.getElementsByClassName("catSlide");
+  if (num > slides.length) { currentIndex = 1}
+  if (num < 1) { currentIndex = slides.length}
+  for (x = 0; x < slides.length; X++){
+        slides[x].style.display = "none";
+  }
+  slides[currentIndex - 1].style.display = "block";
+
+}
+
+/*modal start*/ 
 const modalOpen = document.getElementById('modalOpen');
 const modalContainer = document.getElementById('modalContainer');
 const submitBtn = document.getElementById('submitBtn');
