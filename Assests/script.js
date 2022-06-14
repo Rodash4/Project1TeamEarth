@@ -52,3 +52,17 @@ catBtn.addEventListener ("click", function() {
     catFact.appendChild(Fact);
   })
 });
+
+
+/modal start/ 
+const modalOpen = document.getElementById('modalOpen');
+const modalContainer = document.getElementById('modalContainer');
+const submitBtn = document.getElementById('submitBtn');
+
+modalOpen.addEventListener('click', () => {
+  modalContainer.classList.add('show')
+});
+
+submitBtn.addEventListener('click', () +.{
+  modalContainer.classList.remove('show')
+})
