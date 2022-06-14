@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>The Smart Pet Project</title>
     <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Patrick+Hand"> -->
     <link rel="stylesheet" href="./Assets/style.css"> 
@@ -64,13 +65,53 @@
 
 <div id="funSection">
     <div id="catFacts"></div>
+
+    <title>Furries Adoption</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Josefin+Sans">
+    <link rel="stylesheet" href="./Assets/style.css">
+</head>
+<!-- <img id="cloud" src="./assets/images/rainbowCloud.png">
+<img src="./Assets/images/cartoonSun.png" id="sun"> -->
+<!-- Navagation Bar -->
+<nav id="navBar">
+    <ul>
+        <li>Home</li>
+        <li>Our Mission</li>
+        <li>Contact Us</li>
+        <li><button id="adoptBtn">Adopt</button></li>
+        <li>Donate</li>
+        <li>Online Store</li>
+        <li><input type="text" placeholder="search.."></li>
+
+        
+    </ul>
+</nav>
+<header>
+<img id="logo" src="./Assets/images/furryLogo2.png"><br>
+    <h1>Welcome to The Furry Project!</h1>
+
+    <p>Our mission is to provide fur-ever homes to our lovely family of cats and dogs. <br> All of our furries are rescues or were found as strays and nursed back to health.  <br>We have an excellent team of veternarians on site that care for them during their transition to their final home :)</p>
+    <p>Browse all of our friends below</p>
+</header>
+
+<body>
+<div id="weatherDisplay"></div>
+  
+
+<div class="factsContainer">
+  
+    <div id="catFacts"><h3>Click button for random cat fact!</h3></div>
+
     <button id="catBtn">Cat Facts</button>
+    <div id="dogFacts"><h3>Click button for random dog fact!</h3></div>
     <button id="dogBtn">Dog Facts</button>
     
+
   </div>
-    
+    <!-- Dog Slides -->
     <div id="container">
     <div id="dogContainer">
+
     <div class = "dogSlide" id="dogPics">
       <img src="./Assets/images/boo.jpg" alt="Boo the dog!"><br>
       <div class = "dagName">Boo</div>
@@ -108,14 +149,33 @@
         </button>
         <button id="forward">
           Forward 
+
+    <div id="dogPics"><img src="./Assets/images/toonDog.png"></div><div id="dogName"></div><div id="dogText"></div>
+    <div class="button-container">
+        <button id="nextDoggie">
+        Check out our Dogs!
+
+
         </button>
+
       </div>
     </div>
-   
+   <!-- Cat Slides -->
     <div id="catContainer">
+
 
     <div class = "catSlide fade" id="catPics">
     <img src="./Assets/images/catGlasses.jpg" alt="cat wearing sunglasses"><br>
+
+        <div id="catPics"><img src="./Assets/images/toonCat.png"></div><div id="catName"></div><div id="catText"></div>
+        <div class="catButton-container">
+            <button id="prevCat" class="hide"></button>
+            <button id="nextCat">
+              Check out our Cats!
+
+    <!-- <div class = "catSlide fade" id="catPics">
+    <img src="./assets/images/catGlasses.jpg" alt="cat wearing sunglasses"><br>
+
     <div class="catName">Tom</div></div>
 
     <div class = "catSlide fade" id="catPics">
@@ -141,9 +201,10 @@
     <div class = "catSlide fade" id="catPics">
     <img src="Assets\images\cat6.jpg" alt="Big Eyed Cat"><br>
     <div class="catName">Sushi</div>
-   </div>
-    <div><p>Check out all our cool cats and kittens</p></div>
+   </div> -->
+    <!-- <div><p>Check out all our cool cats and kittens</p></div> -->
 
+<!-- 
     <div class="button-container">
         <button id="backward" onclick="setSlides(-1)">
           Backward
@@ -152,9 +213,32 @@
           Forward
         </button>
       </div>
+</div> -->
 </div>
-</div>
-      
+
     <!-- landing page end -->
   </body>
   </html>
+
+    <div id="myModal" class="modal">
+    <form class="modal-content"><h2>Please fill out this form<span class="close">&times;</span></h2><br>
+                                    <p>We will contact you soon as possible!<br>Thank you for caring!</p>
+        <label for="name">Your Name:</label><br>
+        <input type="text" id="name"><br><br>
+        <label for="email">Email:</label><br>
+        <input type="text" id="email"><br><br>
+        <label for="furry">Name of Furry interested in:</label><br>
+        <input type="text" id="furry"><br><br>
+        <button id="submitBtn">Submit</button>
+      </form>
+     </div>
+
+    <script src="./Assets/script.js"></script>
+
+   
+   
+
+</body>
+
+</footer>
+</html>
