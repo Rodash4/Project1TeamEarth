@@ -11,24 +11,30 @@
 
 <!-- Navagation Bar -->
 <nav id="navBar">
+  <img src="Assets\images\smartpetlogo.png" alt="logo" class="logo"><br>
     <ul>
         <li>Home</li>
         <li>Our Mission</li>
         <li>Contact Us</li>
-        <li><button id="adoptBtn">Adopt</button></li>
-        <li>Donate</li>
-        <li>Online Store</li>
-        <li><input type="text" placeholder="search.."></li>
-
+        <!-- <li><button id="adoptBtn">Adopt</button></li> -->
+        <li><a href="soon.html">Donate</a></li>
+        <li><a href="soon.html">Online Store</a></li>
+        <li><div class="searchBarContainer">
+          <form action="https://www.google.com/search" method="get" class="searchBar">
+            <input type="text" placeholder="Search" name="q">
+            <button type="submit"><img src="./Assets/images/search.png"></button>
+          </form>
+        </div></li>
         
     </ul>
 </nav>
 <header id="petContainer">
 
-    <h1>Welcome to The Furry Project!</h1>
+    <h1>Welcome to The Smart Pet Project!</h1>
 
-    <p>Our mission is to provide fur-ever homes to our lovely family of cats and dogs. <br> All of our furries are rescues or were found as strays and nursed back to health.  <br>We have an excellent team of veternarians on site that care for them during their transition to their final home :)</p>
-    <p>Browse all of our friends below</p>
+    <p class ="ourMission">Our mission is to provide fur-ever homes to our lovely family of cats and dogs. <br> All of our furries are rescues or were found as strays and nursed back to health.  <br>We have an excellent team of veternarians on site that care for them during their transition to their final home :)</p>
+    <button id="adoptBtn">Adopt</button>
+    <p class = "friends">Browse all of our friends below</p>
 </header>
 
 <body>

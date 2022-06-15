@@ -2,7 +2,7 @@
 # The Smart Pet Project (Project1TeamEarth)
 
 #  User Story
-The Smart Pet Project wanted a website created to showcase their pets available for adoption. They wanted the website to be user friendly and have an input for adoption inquiries. They requested to have the start up website to be expandable in future to take donations and set up a store to purchase merchandise online. Requested weather on page, random dog and cat facts and a search bar. 
+The Smart Pet Project wanted a website created to showcase their pets available for adoption. They wanted the website to be user friendly and have an input for adoption inquiries. They requested to have the start up website to be expandable in future to take donations and set up a store to purchase merchandise online. Requested random dog and cat facts and a google search bar on the site. 
 
 # Task
 Create website 
@@ -15,11 +15,11 @@ User friendly
 
 Expandable for donations and future merchandise store
 
-Weather API
+Gog Facts (API)
 
-Dog and Cat Facts (API)
+Cat Facts (API)
 
-Search bar
+Google Search bar
 
 # Project Reqirements
 
@@ -51,5 +51,5 @@ https://github.com/Rodash4/Project1TeamEarth
 
 The following image shows the web application's appearance and functionality:
 
-
+![The Smart Pet Project Website](Assets\images\smartPetProject.PNG)
 
