@@ -45,7 +45,6 @@ function nextSlide() {
   nextDog.textContent = "Next Doggie";
   dogName.textContent = dogPics[currentSlideIndex].name
   pics.innerHTML = "<img src=" + url + ">"
-  
   currentSlideIndex++;
   if( currentSlideIndex === dogPics.length ) {
   currentSlideIndex = 0;
@@ -78,11 +77,7 @@ span.onclick = function() {
 
 // Function to pull cat facts from API
 catBtn.addEventListener ("click", function() {
-  fetch('https://cat-fact.herokuapp.com/facts/random?animal_type=cat&amount=10', {
-  method: 'GET', //GET is the default.
-  credentials: 'same-origin', // include, *same-origin, omit
-  redirect: 'follow', // manual, *follow, error
-})
+  fetch('https://cat-fact.herokuapp.com/facts/random?animal_type=cat&amount=10',)
   .then(function (response) {
     return response.json();
   })
@@ -92,16 +87,14 @@ catBtn.addEventListener ("click", function() {
     var Fact = document.createElement('h3')
     Fact.textContent = data[randomNum].text
     catFact.innerHTML = '';
+    catFact.style.color = "rgb(41, 103, 185)";
     catFact.appendChild(Fact);
+    catMeow.play();
   })
 });
 
 dogBtn.addEventListener ("click", function() {
-  fetch('https://cat-fact.herokuapp.com/facts/random?animal_type=dog&amount=10', {
-  // method: 'GET', //GET is the default.
-  // credentials: 'same-origin', // include, *same-origin, omit
-  // redirect: 'follow', // manual, *follow, error
-})
+  fetch('https://cat-fact.herokuapp.com/facts/random?animal_type=dog&amount=10',)
   .then(function (response) {
     return response.json();
   })
@@ -111,7 +104,9 @@ dogBtn.addEventListener ("click", function() {
     var Fact = document.createElement('h3')
     Fact.textContent = data[randomNum].text
     dogFact.innerHTML = '';
+    dogFact.style.color = "red";
     dogFact.appendChild(Fact);
+    dogBark.play();
   })
 });
 
@@ -158,6 +153,9 @@ if( currentSlideIndex >= catPics.length ) {
 currentSlideIndex = 0;
 }
 }
+
+let catMeow = new Audio('./Assets/catMeow.mp3');
+let dogBark = new Audio('./Assets/dogBark.mp3')
 
 // function displaySlides(num) {
 //   var x;

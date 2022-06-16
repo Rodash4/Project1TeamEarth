@@ -13,44 +13,43 @@
 <nav id="navBar">
   <img src="Assets\images\smartpetlogo.png" alt="logo" class="logo"><br>
     <ul>
-        <li>Home</li>
-        <li>Our Mission</li>
-        <li>Contact Us</li>
-        <!-- <li><button id="adoptBtn">Adopt</button></li> -->
-        <li><a href="soon.html">Donate</a></li>
-        <li><a href="soon.html">Online Store</a></li>
-        <li><div class="searchBarContainer">
-          <form action="https://www.google.com/search" method="get" class="searchBar">
-            <input type="text" placeholder="Search" name="q">
-            <button type="submit"><img src="./Assets/images/search.png"></button>
-          </form>
+      <li>Home</li>
+      <li>Our Mission</li>
+      <li>Contact Us</li>
+      <li><a href="soon.html">Donate</a></li>
+      <li><a href="soon.html">Online Store</a></li>
+      <li><div class="searchBarContainer">
+        <form action="https://www.google.com/search" method="get" class="searchBar">
+          <input type="text" placeholder="Search" name="q">
+          <button type="submit"></button>
+        </form>
         </div></li>
         
     </ul>
 </nav>
+
 <header id="petContainer">
+ 
 
     <h1>Welcome to The Smart Pet Project!</h1>
 
-    <p class ="ourMission">Our mission is to provide fur-ever homes to our lovely family of cats and dogs. <br> All of our furries are rescues or were found as strays and nursed back to health.  <br>We have an excellent team of veternarians on site that care for them during their transition to their final home :)</p>
-    <button id="adoptBtn">Adopt</button>
-    <p class = "friends">Browse all of our friends below</p>
+    <p class ="ourMission">Our mission is to provide fur-ever homes to our lovely family of cats and dogs. <br> All of our furry friends are rescues or were found as strays and nursed back to health.  <br>We have an excellent team of veternarians on site that care for them during their transition to their final home :)</p>
+   
+    <p class = "friends"><a href="#dogContainer">Click here to check out our friends!</p></a>
 </header>
 
 <body>
-<div id="weatherDisplay"></div>
-  
-
-<div class="factsContainer">
-  
+  <div class="factsContainer"><p>Here's some fun facts about our furry lil friends! (disclaimer: some facts are weird, as they are user submitted and populated at random.)</p>
     <div id="catFacts"><h3>Click button for random cat fact!</h3></div>
-
-    <button id="catBtn">Cat Facts</button>
+      <button id="catBtn">Cat Facts</button>
     <div id="dogFacts"><h3>Click button for random dog fact!</h3></div>
-    <button id="dogBtn">Dog Facts</button>
-    
+      <button id="dogBtn">Dog Facts</button>
+  </div> 
 
-  </div>
+
+   <button id="adoptBtn">Click to Adopt</button>
+
+   
     <!-- Dog Slides -->
     <div id="container">
     <div id="dogContainer">
@@ -64,68 +63,32 @@
 
       </div>
     </div>
+
+  
    <!-- Cat Slides -->
     <div id="catContainer">
 
         <div id="catPics"><img src="./Assets/images/toonCat.png"></div><div id="catName"></div><div id="catText"></div>
         <div class="catButton-container">
-            <button id="prevCat" class="hide"></button>
+          
             <button id="nextCat">
               Check out our Cats!
 
-    <!-- <div class = "catSlide fade" id="catPics">
-    <img src="./assets/images/catGlasses.jpg" alt="cat wearing sunglasses"><br>
-    <div class="catName">Tom</div></div>
 
-    <div class = "catSlide fade" id="catPics">
-      <img src="assets\images\cat2.jpg" alt="cat wearing beanie"><br>
-    <div class="catName">Fred</div>
-   </div>
-
-    <div class = "catSlide fade" id="catPics">
-    <img src="assets\images\Cat3.jpg" alt="egyptain cat"><br>
-    <div class="catName">King</div>
-    </div>
-
-    <div class = "catSlide fade" id="catPics">
-    <img src="assets\images\cat4.jpg" alt="Cheif Cat"><br>
-    <div class="catName">Ramsey</div>
-   </div>
-
-    <div class = "catSlide fade" id="catPics">
-    <img src="assets\images\cat5.jpg" alt="Cat"><br>
-    <div class="catName">Queen</div>
-    </div>
-
-    <div class = "catSlide fade" id="catPics">
-    <img src="assets\images\cat6.jpg" alt="Big Eyed Cat"><br>
-    <div class="catName">Sushi</div>
-   </div> -->
-    <!-- <div><p>Check out all our cool cats and kittens</p></div> -->
-
-<!-- 
-    <div class="button-container">
-        <button id="backward" onclick="setSlides(-1)">
-          Backward
-        </button>
-        <button id="forward" onclick= "setSlides(1)">
-          Forward
-        </button>
-      </div>
-</div> -->
 </div>
     <div id="myModal" class="modal">
     <form class="modal-content"><h2>Please fill out this form<span class="close">&times;</span></h2><br>
-                                    <p>We will contact you soon as possible!<br>Thank you for caring!</p>
-        <label for="name">Your Name:</label><br>
+        <p>We will contact you soon as possible!<br><br>Thank you for caring!</p><br><br><br>
+        <label for="name">Your name:</label><br>
         <input type="text" id="name"><br><br>
-        <label for="email">Email:</label><br>
+        <label for="email">Your email adress:</label><br>
         <input type="text" id="email"><br><br>
-        <label for="furry">Name of Furry interested in:</label><br>
+        <label for="furry">Name of furry friend interested in:</label><br>
         <input type="text" id="furry"><br><br>
         <button id="submitBtn">Submit</button>
       </form>
      </div>
+    
 
     <script src="./Assets/script.js"></script>
 
