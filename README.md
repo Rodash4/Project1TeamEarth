@@ -51,5 +51,5 @@ https://github.com/Rodash4/Project1TeamEarth
 
 The following image shows the web application's appearance and functionality:
 
-![The Smart Pet Project Website](Assets\images\smartPetProject.PNG)
+![The Smart Pet Project Website](Assets\images\SmartPetWEB.PNG)
 
