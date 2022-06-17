@@ -18,7 +18,9 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
+    
+    
+} 
 
 a {
     color: aliceblue;
@@ -28,6 +30,7 @@ a {
 html {
     font-size: 20px;
     font-family: 'Advent Pro', sans-serif;
+    background-image: linear-gradient(rgb(213, 213, 213), white);
 }
 
 #petContainer {
@@ -37,23 +40,48 @@ html {
     text-align: center;
     background-size: cover;
     background-image: url(./images/adopt-a-pet.jpg);
+    background-size: cover;
+    background-position: top center;
+    position: relative;
+    z-index: 1;
     display: flex;
     flex-direction: column;
-    background-repeat: no-repeat;
+    background-repeat:no-repeat;
+    
+    
+}
+
+#petContainer::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    opacity: .1;
+    z-index: -1;
+
 
 }
 
 #petContainer a {
-    text-decoration: none;
+    
     color: red;
+    font-weight: bolder;
+    
 }
 
 #petContainer p {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
     font-weight: bolder;
     align-items: center;
     width: 30%;
-    margin-left: 600px;
-
+    align-self: center;
+   
+   
 }
 
 h1 {
@@ -80,15 +108,15 @@ p {
 
     float: left;
     padding: 15px;
-    height: auto;
-    width: auto;
-    max-width: 300px;
-    max-height: 300px;
+    height: auto; 
+    width: 30%;
+    aspect-ratio: 1; 
     border-radius: 35px;
 
 }
 
 nav {
+    display: flex;
     background-color: rgb(41, 103, 185);
     text-align: center;
     height: 100px;
@@ -151,8 +179,7 @@ nav li {
     letter-spacing: .1rem;
     margin-top: 100px;
     background-color: transparent;
-    margin-left: 43.3%;
-    border-radius: 30%;
+    margin-left: 40.3%;
     cursor: pointer;
     box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
 
@@ -179,16 +206,16 @@ nav li {
 }
 
 #dogContainer {
-    border: none;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 25%;
+    aspect-ratio: 1;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     margin-bottom: 100px;
     border-radius: 5%;
-    padding: 20px;
+    padding: 10px;
     background-color: red;
     color: white;
     font-weight: bolder;
@@ -206,10 +233,11 @@ nav li {
     justify-content: center;
     align-items: center;
     width: 25%;
+    aspect-ratio: 1;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     margin-bottom: 100px;
     border-radius: 5%;
-    padding: 90px;
+    padding: 10px;
     background-color: rgb(41, 103, 185);
     border: 5px solid red;
     outline: 5px solid black;
@@ -227,8 +255,9 @@ nav li {
     border: 5px solid red;
     outline: 5px dashed rgb(41, 103, 185);
     padding: 10px;
-    box-shadow: rgb(38, 57, 77) 0px 20px 30px 10px;
 
+    box-shadow: rgb(38, 57, 77) 0px 5px 5px 5px;
+   
 }
 
 .factsContainer p {
@@ -262,26 +291,30 @@ img {
 
 }
 
+
+
 /* The Modal (background) */
 .modal {
-    display: none;
-    position: fixed;
+    display: none; 
+    position: fixed; 
+    top: 0%;
+    left: 35%;
     z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    aspect-ratio: 1;
-    overflow: auto;
-
-}
-
-/* Modal Content/Box */
-.modal-content {
-    background-color: rgb(87, 170, 248);
+    width: max-content;
+    height: fit-content;
+    
+    
+    
+  
+  }
+  
+  /* Modal Content/Box */
+  .modal-content {
+    background-color:rgb(87, 170, 248);
     margin: 15% auto;
     padding: 20px;
     border: none;
-    width: 25%;
+    width: fit-content; 
     border-end-end-radius: 30%;
     border-top-left-radius: 10%;
     border-bottom-left-radius: 10%;
@@ -291,8 +324,8 @@ img {
 .close {
     color: red;
     position: fixed;
-    left: 61.5%;
-    top: 32%;
+    left: 63.7%;
+    top: 7.3%;
     font-size: 28px;
     font-weight: bold;
 }
@@ -302,11 +335,9 @@ img {
     color: black;
     text-decoration: none;
     cursor: pointer;
-}
+  }
 
-#catBtn,
-#nextCat,
-#submitBtn {
+  #catBtn, #nextCat, #submitBtn {
     font-size: 26px;
     background-color: white;
     border: 2px solid black;
@@ -314,14 +345,12 @@ img {
     padding: 10px;
     font-family: Josefin Sans;
     -webkit-text-stroke: 1px rgb(34, 130, 226);
-    -webkit-text-fill-color: white;
-    border-radius: 30%;
+	-webkit-text-fill-color: white;
+    margin-top: 10px;
+  }
 
-}
+  #catBtn, #nextCat, #submitBtn:hover {
 
-#catBtn,
-#nextCat,
-#submitBtn:hover {
     cursor: pointer;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     color: rgb(183, 210, 252);
@@ -336,9 +365,10 @@ img {
     background-color: rgb(34, 130, 226);
     padding: 10px;
     font-family: Josefin Sans;
-    -webkit-text-stroke: 1px red;
+
+    -webkit-text-stroke: 1px red ;
     -webkit-text-fill-color: white;
-    border-radius: 30%;
+
     margin-top: 10px;
 }
 
@@ -359,16 +389,3 @@ img {
     background-repeat: no-repeat;
 }
 
-@media screen and (max-width:600px) {
-
-    .navBar a,
-    .navBar input[type-text] {
-        float: none;
-        display: block;
-        text-align: left;
-        width: 100%;
-        margin: 0;
-        padding: 14px;
-
-    }
-}
