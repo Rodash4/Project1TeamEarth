@@ -1,3 +1,4 @@
+// global scope variables
 var humanName = document.getElementById("name");
 var emailAddy = document.getElementById("email");
 var furryName = document.getElementById("furry");
@@ -51,65 +52,6 @@ function nextSlide() {
 }
 }
 
-// function executed on click of submit that stores pertinent data to local storage.
-
-submitBtn.addEventListener("click", function() {
-    var potentialClient = {
-                humanName: humanName.value,
-                emailAddy: emailAddy.value,
-                furryName: furryName.value.trim()
-  };
-  
-  localStorage.setItem("potentialClient", JSON.stringify(potentialClient));
-  return;
-  });
-
-   ///// code for modal
-
-btn.onclick = function() {
-  modal.style.display = "block";
-}
-
-span.onclick = function() {
-  modal.style.display = "none";
-}
-
-
-// Function to pull cat facts from API
-catBtn.addEventListener ("click", function() {
-  fetch('https://cat-fact.herokuapp.com/facts/random?animal_type=cat&amount=10',)
-  .then(function (response) {
-    return response.json();
-  })
-  .then(function (data) {
-    randomNum = Math.floor(Math.random() * data.length)
-    console.log(data);
-    var Fact = document.createElement('h3')
-    Fact.textContent = data[randomNum].text
-    catFact.innerHTML = '';
-    catFact.style.color = "rgb(41, 103, 185)";
-    catFact.appendChild(Fact);
-    catMeow.play();
-  })
-});
-
-dogBtn.addEventListener ("click", function() {
-  fetch('https://cat-fact.herokuapp.com/facts/random?animal_type=dog&amount=10',)
-  .then(function (response) {
-    return response.json();
-  })
-  .then(function (data) {
-    randomNum = Math.floor(Math.random() * data.length)
-    console.log(data);
-    var Fact = document.createElement('h3')
-    Fact.textContent = data[randomNum].text
-    dogFact.innerHTML = '';
-    dogFact.style.color = "red";
-    dogFact.appendChild(Fact);
-    dogBark.play();
-  })
-});
-
 // Cat slides pics and bio
 var catPics = [
   {name : "Tom",
@@ -138,11 +80,6 @@ var url = "./Assets/images/catPics/" + file;
 var pics = document.getElementById("catPics");
 var catText = document.getElementById("catText")
 var catName = document.getElementById("catName")
-// var prev = document.createElement("button")
-// var prevText = document.createTextNode("Previous Cat!");
-// prev.appendChild(prevText);
-// var prevEl = document.getElementById("catSlideBtns")
-// prevEl.appendChild(prev);
 catText.innerHTML = "<p>" + catPics[currentSlideIndex].text +"</p>"
 nextCat.textContent = "Next Cat";
 catName.textContent = catPics[currentSlideIndex].name
@@ -154,71 +91,70 @@ currentSlideIndex = 0;
 }
 }
 
+// variables for sound to use when fact buttons are clicked.
 let catMeow = new Audio('./Assets/catMeow.mp3');
 let dogBark = new Audio('./Assets/dogBark.mp3')
 
-// function displaySlides(num) {
-//   var x;
-//   var slides = document.getElementsByClassName("catSlide");
-//   if (num > slides.length) { currentIndex = 1 }
-//   if (num < 1) { currentIndex = slides.length }
-//   for (x = 0; x < slides.length; x++) {
-//       slides[x].style.display = "none";
-//   }
-//   slides[currentIndex - 1].style.display = "block";
-// }
+// function executed on click of submit that stores pertinent data to local storage.
 
-// function setSlides(num) {
-//   displaySlides(currentIndex += num);
-// }
+submitBtn.addEventListener("click", function() {
+    var potentialClient = {
+     humanName: humanName.value,
+     emailAddy: emailAddy.value,
+     furryName: furryName.value.trim()
+  };
+  
+  localStorage.setItem("potentialClient", JSON.stringify(potentialClient));
+  return;
+  });
 
-// var currentIndex = 1;
-// displaySlides(currentIndex);
+   ///// code for modal
 
-// function setSlides(num) {
-//   displaySlides(currentIndex += num);
-// }
+btn.onclick = function() {
+  modal.style.display = "flex";
+}
 
-// function display(num) {
-//   var x;
-//   var catSlides = document.getElementsByClassName("catSlide");
-//   if (num > slides.length) { currentIndex = 1}
-//   if (num < 1) { currentIndex = slides.length}
-//   for (x = 0; x < slides.length; X++){
-//         slides[x].style.display = "none";
-//   }
-//   slides[currentIndex - 1].style.display = "block";
-
-// }
+span.onclick = function() {
+  modal.style.display = "none";
+}
 
 
-
-
-fetch('http://api.openweathermap.org/geo/1.0/zip?zip=85028,US&appid=a46321094570747c6e960f39cd5b1559', {
-  method: 'GET', //GET is the default.
-  credentials: 'same-origin', // include, *same-origin, omit
-  redirect: 'follow', // manual, *follow, error
-})
+// Function to pull cat facts from API
+catBtn.addEventListener ("click", function() {
+  fetch('https://cat-fact.herokuapp.com/facts/random?animal_type=cat&amount=10',)
   .then(function (response) {
     return response.json();
   })
   .then(function (data) {
+    randomNum = Math.floor(Math.random() * data.length)
     console.log(data);
-    localStorage.setItem ("longitude", data.lon);
-    localStorage.setItem ("latitude", data.lat);
-  });
-
-  var latitude = localStorage.getItem("latitude");
-  var longitude = localStorage.getItem("longitude");
-
-  fetch('https://api.openweathermap.org/data/3.0/onecall?lat='+ latitude + '&lon=' + longitude + '&appid=a46321094570747c6e960f39cd5b1559', {
-    method: 'GET', //GET is the default.
-    credentials: 'same-origin', // include, *same-origin, omit
-    redirect: 'follow', // manual, *follow, error
+    var Fact = document.createElement('h3')
+    Fact.textContent = data[randomNum].text
+    catFact.innerHTML = '';
+    catFact.style.color = "rgb(41, 103, 185)";
+    catFact.appendChild(Fact);
+    catMeow.play();
   })
-    .then(function (response) {
-      return response.json();
-    })
-    .then(function (data) {
-      console.log(data);
-    });
+});
+
+// Function to pull dog facts from API
+
+dogBtn.addEventListener ("click", function() {
+  fetch('https://cat-fact.herokuapp.com/facts/random?animal_type=dog&amount=10',)
+  .then(function (response) {
+    return response.json();
+  })
+  .then(function (data) {
+    randomNum = Math.floor(Math.random() * data.length)
+    console.log(data);
+    var Fact = document.createElement('h3')
+    Fact.textContent = data[randomNum].text
+    dogFact.innerHTML = '';
+    dogFact.style.color = "red";
+    dogFact.appendChild(Fact);
+    dogBark.play();
+  })
+});
+
+
+
